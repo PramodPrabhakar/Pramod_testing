@@ -1,4 +1,4 @@
-FROM node:alpine
+FROM docker.io/nginx:mainline-alpine
 WORKDIR '/app'
 COPY package.json .
 RUN npm install
@@ -6,5 +6,5 @@ RUN npm install
 # RUN npm install react-icons --save
 # RUN npm install --save react-router-dom
 # RUN npm install react-tooltip
-# COPY . .
+COPY . .
 CMD ["npm","start"]
